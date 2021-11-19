@@ -1,0 +1,25 @@
+strong {
+  padding-right: 1rem;
+}
+
+#staffHeader {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 20px;
+}
+
+#staffCard {
+  width: 70%;
+  height: auto;
+  display: flex;
+  border: 1px solid rgba(29, 28, 28, 0.404);
+  border-radius: 2px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#details {
+  margin-left: 2rem;
+  margin-top: 1 rem;
+  font-size: 16px;
+}
