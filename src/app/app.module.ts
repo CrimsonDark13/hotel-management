@@ -9,10 +9,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RoomsComponent } from './rooms/rooms.component';
 import { GuestsComponent } from './guests/guests.component';
 import { BookingsComponent } from './bookings/bookings.component';
-import { InventoryComponent } from './inventory/inventory.component';
 import { StaffComponent } from './staff/staff.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +23,10 @@ import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.co
     RoomsComponent,
     GuestsComponent,
     BookingsComponent,
-    InventoryComponent,
     StaffComponent,
     SidebarComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
