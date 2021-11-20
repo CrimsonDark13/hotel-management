@@ -1,1 +1,20 @@
-<p>staff works!</p>
+<div id="staff" class="text-center">
+  <div id="staffHeader">
+    <h1>Hotel Staff</h1>
+  </div>
+  <div id="content">
+    <div
+      id="staffCard"
+      class="card border border-2 rounded"
+      *ngFor="let index of staff"
+    >
+      <div id="details" class="text-left">
+        <strong>Staff id :</strong>{{ index.id }} <br />
+        <strong>Name :</strong>{{ index.name }} <br />
+        <strong>Designation :</strong>{{ index.designation }} <br />
+        <strong>Gender :</strong>{{ index.gender }} <br />
+        <strong>Date of Joining :</strong>{{ index.doj }} <br />
+      </div>
+    </div>
+  </div>
+</div>
