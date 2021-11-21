@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-bookings',
@@ -7,30 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingsComponent implements OnInit {
   constructor() {}
-
   ngOnInit(): void {}
+
+  checkIn = '';
+  checkOut = '';
+  roomType = '';
+  name = '';
+  contact = '';
+  email = '';
+
+  onSubmit(formData: NgForm) {
+    console.log(formData);
+    this.checkIn = formData.value.checkIn;
+    this.checkOut = formData.value.checkOut;
+    this.roomType = formData.value.roomType;
+    this.name = formData.value.name;
+    this.contact = formData.value.contact;
+    this.email = formData.value.email;
+
+  }
 
   guest = [
     {
-      bookid: '202',
       name: 'Fatima Doe',
       checkin: '11/11/2021',
       checkout: '13/11/2021',
       roomType: 'Suite',
     },
     {
-      bookid: '202',
       name: 'Fatima Doe',
       checkin: '11/11/2021',
       checkout: '13/11/2021',
       roomType: 'Suite',
     },
     {
-      bookid: '202',
       name: 'Fatima Doe',
       checkin: '11/11/2021',
       checkout: '13/11/2021',
       roomType: 'Suite',
     },
   ];
+
+  addBooking() {}
 }

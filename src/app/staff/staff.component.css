@@ -6,6 +6,7 @@ strong {
   margin-bottom: 2rem;
   margin-top: 2rem;
   font-size: 20px;
+  letter-spacing: 3px;
 }
 
 #staffCard {
@@ -13,7 +14,7 @@ strong {
   height: auto;
   display: flex;
   border: 1px solid rgba(29, 28, 28, 0.404);
-  border-radius: 2px;
+  border-radius: 25px;
   padding: 2rem;
   margin-bottom: 2rem;
 }

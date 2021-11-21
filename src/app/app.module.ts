@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +16,7 @@ import { StaffComponent } from './staff/staff.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,13 +30,17 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     StaffComponent,
     SidebarComponent,
     DashboardLayoutComponent,
-    AboutusComponent
+    AboutusComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
