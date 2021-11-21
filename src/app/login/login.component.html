@@ -7,7 +7,7 @@
             <span class="fa fa-user-o"></span>
           </div>
           <h3 class="text-center mb-4">ADMIN</h3>
-          <form method="post" action="#">
+          <form (ngSubmit)="onSubmit(adminForm)" #adminForm="ngForm">
             <div class="form-group">
               <input
                 type="text"
@@ -15,9 +15,10 @@
                 class="form-control rounded-left"
                 placeholder="Username"
                 required
+                ngModel
               />
             </div>
-            <div class="form-group d-flex">
+            <!-- <div class="form-group d-flex">
               <input
                 type="email"
                 name="email"
@@ -25,7 +26,7 @@
                 placeholder="Email id"
                 required
               />
-            </div>
+            </div> -->
             <div class="form-group d-flex">
               <input
                 type="password"
@@ -33,6 +34,7 @@
                 class="form-control rounded-left"
                 placeholder="Password"
                 required
+                ngModel
               />
             </div>
             <div class="form-group">
