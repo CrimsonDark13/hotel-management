@@ -1,12 +1,12 @@
 <div id="staff" class="text-center">
   <div id="staffHeader">
-    <h1>Hotel Staff</h1>
+    <h1 class="font-weight-bold">Hotel Staff</h1>
   </div>
   <div id="content">
     <div
       id="staffCard"
-      class="card border border-2 rounded"
-      *ngFor="let index of staffs"
+      class="card mx-auto border text-center border-1"
+      *ngFor="let index of staff"
     >
       <div id="details" class="text-left">
         <strong>Staff id :</strong>{{ index._id }} <br />

@@ -14,6 +14,7 @@ import { StaffComponent } from './staff/staff.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
@@ -30,7 +31,14 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     AboutusComponent,
     ErrorPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+  ],
+
   providers: [],
   bootstrap: [AppComponent],
 })

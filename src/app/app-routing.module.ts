@@ -23,7 +23,7 @@ const routes: Routes = [
       { path: 'staff', component: StaffComponent },
     ],
   },
-  { path: 'error', component: ErrorPageComponent },
+  { path: '**', pathMatch: 'full', component: ErrorPageComponent },
 ];
 
 @NgModule({

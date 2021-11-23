@@ -5,3 +5,12 @@ input {
 select {
   margin-left: 2rem;
 }
+
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+}
+
+.form-control-sm {
+  border-width: 1px;
+}
