@@ -6,14 +6,14 @@
     <div
       id="staffCard"
       class="card border border-2 rounded"
-      *ngFor="let index of staff"
+      *ngFor="let index of staffs"
     >
       <div id="details" class="text-left">
-        <strong>Staff id :</strong>{{ index.id }} <br />
+        <strong>Staff id :</strong>{{ index._id }} <br />
         <strong>Name :</strong>{{ index.name }} <br />
         <strong>Designation :</strong>{{ index.designation }} <br />
         <strong>Gender :</strong>{{ index.gender }} <br />
-        <strong>Date of Joining :</strong>{{ index.doj }} <br />
+        <strong>Date of Joining :</strong>{{ index.dateOfJoining }} <br />
       </div>
     </div>
   </div>

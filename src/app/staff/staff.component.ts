@@ -1,4 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
+interface Staff {
+  _id: number;
+  name: string;
+  designation: string;
+  gender: string;
+  dateOfJoining: string;
+}
 
 @Component({
   selector: 'app-staff',
@@ -6,9 +15,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
-  constructor() {}
+  staffs: Staff[] = [];
+  constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.http
+      .get<Staff[]>('http://localhost:3000/hotel/api/v1/staffs')
+      .subscribe((response) => {
+        this.staffs = response;
+      });
+  }
 
   staff = [
     {
