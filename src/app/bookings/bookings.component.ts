@@ -14,7 +14,8 @@ export class BookingsComponent implements OnInit {
   checkIn = '';
   checkOut = '';
   roomType = '';
-  name = '';
+  firstName = '';
+  lastName = '';
   contact = '';
   email = '';
 
@@ -23,10 +24,10 @@ export class BookingsComponent implements OnInit {
     this.checkIn = formData.value.checkIn;
     this.checkOut = formData.value.checkOut;
     this.roomType = formData.value.roomType;
-    this.name = formData.value.name;
+    this.firstName = formData.value.name;
+    this.lastName = formData.value.name;
     this.contact = formData.value.contact;
     this.email = formData.value.email;
-
   }
 
   guest = [

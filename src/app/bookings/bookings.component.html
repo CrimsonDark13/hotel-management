@@ -1,100 +1,92 @@
-<div class="container">
-  <br />
-  <h3 class="text-center mb-4">Enter Booking details</h3>
-
-  <div class="row">
-    <div class="col-md-6 col-lg-5">
-      <div class="p-4 md-5">
-        <div class="d-flex align-items-center justify-content-center">
-          <form (ngSubmit)="onSubmit(bookingForm)" #bookingForm="ngForm">
-            <div class="form-group d-flex">
-              <label for="checkIn" style="padding-left: 2 rem"
-                >Check-in date:
-              </label>
-              <input
-                type="date"
-                name="checkIn"
-                class="form-control-sm"
-                required
-                ngModel
-              />
-            </div>
-            <div class="form-group d-flex">
-              <label for="checkOut" style="padding-left: 2 rem"
-                >Check-out date:
-              </label>
-              <input
-                type="date"
-                name="checkOut"
-                class="form-control-sm"
-                required
-                ngModel
-              />
-            </div>
-            <div class="form-group d-flex">
-              <label for="name" style="padding-left: 2 rem">Name: </label>
-              <input
-                type="text"
-                name="name"
-                class="form-control-sm"
-                required
-                ngModel
-              />
-            </div>
-            <div class="form-group d-flex">
-              <label for="roomType" style="padding-left: 2 rem"
-                >Room Type:
-              </label>
-              <select
-                id="roomType"
-                name="roomType"
-                class="form-control-sm"
-                required
-                ngModel
-              >
-                <option selected>Choose room type</option>
-                <option value="single">Single</option>
-                <option value="deluxe">Deluxe</option>
-                <option value="suite">Suite</option>
-              </select>
-            </div>
-            <div class="form-group d-flex">
-              <label for="roomsNum">No. of Rooms: </label>
-              <input
-                name="roomNum"
-                type="number"
-                style="width: 20%"
-                required
-                class="form-control-sm"
-                ngModel
-              />
-            </div>
-            <div class="form-group d-flex">
-              <label for="contact">Contact number: </label>
-              <input
-                name="contact"
-                type="tel"
-                class="form-control-sm"
-                required
-                ngModel
-              />
-            </div>
-            <button class="btn btn-outline-dark">Add Booking</button>
-          </form>
-        </div>
-      </div>
+<div class="bookingform container-fluid">
+  <h2 class="bookingHeader">Enter Booking information</h2>
+  <form action="" (ngSubmit)="onSubmit(bookingForm)" #bookingForm="ngForm">
+    <div class="form-group inlined">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        pattern="[A-Z\sa-z]{3,20}"
+        placeholder="Fatima"
+        required
+        ngModel
+      />
     </div>
-  </div>
+    <div class="form-group inlined">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        pattern="[A-Z\sa-z]{3,20}"
+        placeholder="Doe"
+        required
+        ngModel
+      />
+    </div>
+
+    <div class="form-group inlined">
+      <label for="email">Email id</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="fathima.doe@email.com "
+        required
+        ngModel
+      />
+    </div>
+
+    <div class="form-group inlined">
+      <label for="phone">Contact Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="1453280968"
+        required
+        ngModel
+      />
+    </div>
+
+    <div class="form-group inlined">
+      <label for="checkIn">Check-in Date</label>
+      <input type="date" id="checkIn" name="checkIn" required ngModel />
+    </div>
+    <div class="form-group inlined">
+      <label for="checkOut">Check-out Date</label>
+      <input type="date" id="checkOut" name="checkOut" required ngModel />
+    </div>
+    <div class="form-group inlined">
+      <label for="roomType">Room Type: </label>
+      <select
+        id="roomType"
+        name="roomType"
+        class="form-control-sm"
+        required
+        ngModel
+      >
+        <option value="">Room Type</option>
+        <option value="single">Single</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="suite">Suite</option>
+      </select>
+    </div>
+    <button class="btn btn-outline-dark inlined">Add Booking</button>
+  </form>
+  <hr />
 </div>
 
 <div class="container">
   <table class="table">
     <thead class="thead-dark">
-      <tr>
+      <tr class="table-dark">
         <th scope="col">Guest Name</th>
         <th scope="col">Check-in Date</th>
         <th scope="col">Check-out Date</th>
         <th scope="col">Booked room</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -104,6 +96,10 @@
         <td>{{ index.checkin }}</td>
         <td>{{ index.checkout }}</td>
         <td>{{ index.roomType }}</td>
+        <td>
+          <button class="fa fa-edit edit"></button>
+          <button class="fa fa-trash delete"></button>
+        </td>
       </tr>
     </tbody>
   </table>

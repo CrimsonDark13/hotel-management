@@ -1,7 +1,10 @@
-.spaced{
-    letter-spacing: 10px;
+.position-fixed {
+  max-width: 50%;
+}
+.spaced {
+  letter-spacing: 10px;
 }
 
 a {
-    font-size: 18px;
+  font-size: 18px;
 }
