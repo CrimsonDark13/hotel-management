@@ -90,12 +90,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let index of guest">
-        <th scope="row">{{ index.name }}</th>
+      <tr *ngFor="let booking of bookings">
+        <th scope="row">{{ booking.name }}</th>
 
-        <td>{{ index.checkin }}</td>
-        <td>{{ index.checkout }}</td>
-        <td>{{ index.roomType }}</td>
+        <td>{{ booking.bookingInfo.check_in }}</td>
+        <td>{{ booking.bookingInfo.check_out }}</td>
+        <td>{{ booking.bookingInfo.roomType }}</td>
         <td>
           <button class="fa fa-edit edit"></button>
           <button class="fa fa-trash delete"></button>

@@ -26,41 +26,41 @@ export class StaffComponent implements OnInit {
       });
   }
 
-  staff = [
-    {
-      id: '101',
-      name: 'Fatima',
-      designation: 'Cleaner',
-      gender: 'Male',
-      dateOfJoining: '11/11/2021',
-    },
-    {
-      id: '101',
-      name: 'Fatima',
-      designation: 'Cleaner',
-      gender: 'Male',
-      dateOfJoining: '11/11/2021',
-    },
-    {
-      id: '101',
-      name: 'Fatima',
-      designation: 'Cleaner',
-      gender: 'Male',
-      dateOfJoining: '11/11/2021',
-    },
-    {
-      id: '101',
-      name: 'Fatima',
-      designation: 'Cleaner',
-      gender: 'Male',
-      dateOfJoining: '11/11/2021',
-    },
-    {
-      id: '101',
-      name: 'Fatima',
-      designation: 'Cleaner',
-      gender: 'Male',
-      dateOfJoining: '11/11/2021',
-    },
-  ];
+  // staff = [
+  //   {
+  //     id: '101',
+  //     name: 'Fatima',
+  //     designation: 'Cleaner',
+  //     gender: 'Male',
+  //     dateOfJoining: '11/11/2021',
+  //   },
+  //   {
+  //     id: '101',
+  //     name: 'Fatima',
+  //     designation: 'Cleaner',
+  //     gender: 'Male',
+  //     dateOfJoining: '11/11/2021',
+  //   },
+  //   {
+  //     id: '101',
+  //     name: 'Fatima',
+  //     designation: 'Cleaner',
+  //     gender: 'Male',
+  //     dateOfJoining: '11/11/2021',
+  //   },
+  //   {
+  //     id: '101',
+  //     name: 'Fatima',
+  //     designation: 'Cleaner',
+  //     gender: 'Male',
+  //     dateOfJoining: '11/11/2021',
+  //   },
+  //   {
+  //     id: '101',
+  //     name: 'Fatima',
+  //     designation: 'Cleaner',
+  //     gender: 'Male',
+  //     dateOfJoining: '11/11/2021',
+  //   },
+  // ];
 }
