@@ -7,8 +7,8 @@ interface bookingInfo {
   contactNumber: String;
   email: String;
   bookingInfo: {
-    check_in: String;
-    check_out: String;
+    check_in: Date;
+    check_out: Date;
     roomType: String;
   };
   _id?: String;
@@ -61,27 +61,6 @@ export class BookingsComponent implements OnInit {
         console.log(responseData);
       });
   }
-
-  guest = [
-    {
-      name: 'Fatima Doe',
-      checkin: '11/11/2021',
-      checkout: '13/11/2021',
-      roomType: 'Suite',
-    },
-    {
-      name: 'Fatima Doe',
-      checkin: '11/11/2021',
-      checkout: '13/11/2021',
-      roomType: 'Suite',
-    },
-    {
-      name: 'Fatima Doe',
-      checkin: '11/11/2021',
-      checkout: '13/11/2021',
-      roomType: 'Suite',
-    },
-  ];
 
   addBooking() {}
 }

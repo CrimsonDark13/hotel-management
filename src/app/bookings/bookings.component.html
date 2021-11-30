@@ -92,9 +92,8 @@
     <tbody>
       <tr *ngFor="let booking of bookings">
         <th scope="row">{{ booking.name }}</th>
-
-        <td>{{ booking.bookingInfo.check_in }}</td>
-        <td>{{ booking.bookingInfo.check_out }}</td>
+        <td>{{ booking.bookingInfo.check_in | date: "dd-MM-yyyy" }}</td>
+        <td>{{ booking.bookingInfo.check_out | date: "dd-MM-yyyy" }}</td>
         <td>{{ booking.bookingInfo.roomType }}</td>
         <td>
           <button class="fa fa-edit edit"></button>
