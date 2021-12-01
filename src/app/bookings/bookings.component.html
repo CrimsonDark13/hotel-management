@@ -97,7 +97,10 @@
         <td>{{ booking.bookingInfo.roomType }}</td>
         <td>
           <button class="fa fa-edit edit"></button>
-          <button class="fa fa-trash delete"></button>
+          <button
+            (click)="delBooking(booking._id)"
+            class="fa fa-trash delete"
+          ></button>
         </td>
       </tr>
     </tbody>
