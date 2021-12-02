@@ -1,5 +1,15 @@
-<div class="d-flex flex-wrap justify-content-around p-5">
-    <div class="card" style="width: 500px;">
+<div
+  class="d-flex flex-wrap justify-content-around p-5"
+  *ngFor="let room of rooms"
+>
+  <div class="card" style="width: 500px">
+    <img class="class-image-top" src="{{ room.roomImage }}" />
+    <div class="card-body">
+      <h3>{{ room.roomType }}</h3>
+      <p>{{ room.roomDescription }}</p>
+    </div>
+  </div>
+  <!-- <div class="card" style="width: 500px;">
         <img class="class-image-top" src="../../assets/images/big-bed.jpg">
         <div class="card-body">
             <h3>Title</h3>
@@ -26,12 +36,5 @@
             <h3>Title</h3>
             <p>Something about the room</p>
         </div>
-    </div>
-    <div class="card" style="width: 500px;">
-        <img class="class-image-top" src="../../assets/images/big-bed.jpg">
-        <div class="card-body">
-            <h3>Title</h3>
-            <p>Something about the room</p>
-        </div>
-    </div>
+    </div> -->
 </div>
