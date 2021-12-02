@@ -1,6 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
+interface Room {
+  _id: String;
+  roomType: String;
+  roomDescription: String;
+  roomImage: String;
+}
+
 @Component({
   selector: 'app-rooms',
   templateUrl: './rooms.component.html',
@@ -9,11 +16,12 @@ import { Component, OnInit } from '@angular/core';
 export class RoomsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
+  rooms: Room[] = [];
   ngOnInit(): void {
     this.http
-      .get('http://localhost:3000/hotel/api/v1/rooms')
+      .get<Room[]>('http://localhost:3000/hotel/api/v1/rooms')
       .subscribe((response) => {
-        console.log(response);
+        this.rooms = response;
       });
   }
 }
