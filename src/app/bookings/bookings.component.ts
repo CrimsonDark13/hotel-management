@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { identity } from 'rxjs';
 
 interface bookingInfo {
   name: String;
@@ -11,7 +12,7 @@ interface bookingInfo {
     check_out: Date;
     roomType: String;
   };
-  _id?: String;
+  _id?: Object;
 }
 
 @Component({
@@ -62,5 +63,7 @@ export class BookingsComponent implements OnInit {
       });
   }
 
-  addBooking() {}
+  delete(id: Object) {
+    console.log(id);
+  }
 }
