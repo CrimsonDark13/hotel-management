@@ -1,22 +1,25 @@
 <div>
-    <table class="table table-striped text-center fs-4 pt-3">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Room</th>
-                <th>Check In</th>
-                <th>Check Out</th>
-                <th>Phone Number</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>asgrg</td>
-                <td>srgw</td>
-                <td>arg</td>
-                <td>wrg</td>
-                <td>yhwrht</td>
-            </tr>
-        </tbody>
-    </table>
+  <div id="guestHeader">
+    <h1 class="text-center display-1">Guests' Information</h1>
+  </div>
+  <table class="table table-striped text-center fs-4 pt-3">
+    <thead>
+      <tr class="table-dark">
+        <th>Name</th>
+        <th>Room</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let guest of guests">
+        <td>{{ guest.name }}</td>
+        <td>{{ guest.bookingInfo.roomType }}</td>
+        <td>{{ guest.bookingInfo.check_in | date: "dd-MM-yyyy" }}</td>
+        <td>{{ guest.bookingInfo.check_out | date: "dd-MM-yyyy" }}</td>
+        <td>{{ guest.contactNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
