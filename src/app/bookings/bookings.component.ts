@@ -63,7 +63,10 @@ export class BookingsComponent implements OnInit {
       });
   }
 
-  delete(id: Object) {
+  addBooking() {}
+
+  delBooking(id: any) {
     console.log(id);
+    this.http.post('http://localhost:3000/hotel/api/v1/bookings', id);
   }
 }
