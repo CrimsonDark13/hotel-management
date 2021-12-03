@@ -96,7 +96,6 @@
         <td>{{ booking.bookingInfo.check_out | date: "dd-MM-yyyy" }}</td>
         <td>{{ booking.bookingInfo.roomType }}</td>
         <td>
-          <button class="fa fa-edit edit"></button>
           <button
             (click)="delBooking(booking._id)"
             class="fa fa-trash delete"
